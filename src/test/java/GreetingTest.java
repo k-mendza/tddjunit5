@@ -1,18 +1,24 @@
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class GreetingTest {
 
+    private Greeting greeting;
+
+    @BeforeEach
+    void setUp(){
+        greeting = new Greeting();
+    }
+
     @Test
     void testHelloWorld() {
-        Greeting greeting = new Greeting();
         assertEquals("Hello World", greeting.helloWorld());
     }
 
     @Test
     void testHelloWorldWithName() {
-        Greeting greeting = new Greeting();
         String name = "Charles";
         assertEquals("Hello Charles", greeting.helloWorld(name));
     }
