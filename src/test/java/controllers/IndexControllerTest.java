@@ -20,7 +20,7 @@ class IndexControllerTest {
     }
 
     @Test
-    void oupsHandler() {
-        assertEquals("notimplemented", indexController.oupsHandler(), "Wrong View Returned");
+    void oopsHandler() {
+        assertThrows(ValueNotFoundException.class, () -> indexController.oopsHandler());
     }
 }
