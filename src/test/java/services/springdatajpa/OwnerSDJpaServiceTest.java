@@ -9,6 +9,7 @@ import services.OwnerService;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@Tag("service")
 class OwnerSDJpaServiceTest {
 
     OwnerService service;
